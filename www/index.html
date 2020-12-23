@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+ <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+ <script src="components/loader.js"></script>
+ <script src="lib/onsenui/js/onsenui.min.js"></script>
+ 
+ <link rel="stylesheet" href="components/loader.css">
+ <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+ <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+ <link rel="stylesheet" href="css/style.css">
+ 
+ <script>
+ // Page init event
+ document.addEventListener('init', function(event) {
+ var page = event.target;
+ 
+ if (page.matches('#first-page')) {
+ 
+ page.querySelector('#push-button-1').onclick = function() {
+ document.querySelector('#navigator').pushPage('page2.html');
+ };
+ page.querySelector('#push-button-2').onclick = function() {
+ document.querySelector('#navigator').pushPage('page3.html');
+ };
+ 
+ } else if (page.matches('#second-page')) {
+ 
+ page.querySelector('#push-button-3').onclick = function() {
+ document.querySelector('#navigator').pushPage('page4.html');
+ };
+ 
+ page.querySelector('#push-button-4').onclick = function() {
+ document.querySelector('#navigator').pushPage('page5.html');
+ };
+ 
+ } else if (page.matches('#third-page')) {
+ 
+ page.querySelector('#push-button-5').onclick = function() {
+ document.querySelector('#navigator').pushPage('page6.html');
+ };
+ 
+ page.querySelector('#push-button-6').onclick = function() {
+ document.querySelector('#navigator').pushPage('page7.html');
+ };
+ }else if (page.matches('#four-page')) {
+ 
+ page.querySelector('#push-button-7').onclick = function() {
+ document.querySelector('#navigator').pushPage('page1.html');
+ };
+ }else if (page.matches('#five-page')) {
+ 
+ page.querySelector('#push-button-8').onclick = function() {
+ document.querySelector('#navigator').pushPage('page1.html');
+ };
+ }else if (page.matches('#six-page')) {
+ 
+ page.querySelector('#push-button-7').onclick = function() {
+ document.querySelector('#navigator').pushPage('page1.html');
+ };
+ 
+ 
+ }else if (page.matches('#seven-page')) {
+ 
+ page.querySelector('#push-button-8').onclick = function() {
+ document.querySelector('#navigator').pushPage('page1.html');
+ };
+ }
+ });
+
+ if (ons.platform.isIPhoneX()) {
+ document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+ document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+ }
+ </script>
+</head>
+<body>
+ <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+ 
+ <ons-template id="page1.html">
+ <ons-page id="first-page">
+ <ons-toolbar>
+ <div class="center">質問1</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>1.和風と洋風どちらが好き？
+ </p>
+ <ons-button id="push-button-1">和風</ons-button>
+ <ons-button id="push-button-2">洋風</ons-button>
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+ <ons-template id="page2.html">
+ <ons-page id="second-page">
+ <ons-toolbar>
+ <div class="left"><ons-back-button>質問1</ons-back-button></div>
+ <div class="center">質問2</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>密着系の衣服は好きですか？</p>
+ <ons-button id="push-button-3">好き</ons-button>
+ <ons-button id="push-button-4">嫌い</ons-button>
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+ <ons-template id="page3.html">
+ <ons-page id="third-page">
+ <ons-toolbar>
+ <div class="left"><ons-back-button>質問1</ons-back-button></div>
+ <div class="center">３ページ目</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>密着系の衣服は好きですか？</p>
+ <ons-button id="push-button-5">好き</ons-button>
+ <ons-button id="push-button-6">嫌い</ons-button>
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+ <ons-template id="page4.html">
+ <ons-page id="four-page">
+ <ons-toolbar>
+ <div class="left"><ons-back-button>質問2</ons-back-button></div>
+ <div class="center">結果</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>結果 あなたにはまわしをおすすめします</p>
+ <ons-button id="push-button-g">最初に戻る</ons-button>
+ 
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+ <ons-template id="page5.html">
+ <ons-page id="five-page">
+ <ons-toolbar>
+ <div class="left"><ons-back-button>質問2</ons-back-button></div>
+ <div class="center">5ページ目</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>結果 あなたにはふんどしをおすすめします</p>
+ <ons-button id="push-button-h">最初に戻る</ons-button>
+ 
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+ <ons-template id="page6.html">
+ <ons-page id="six-page">
+ <ons-toolbar>
+ <div class="left"><ons-back-button>質問2</ons-back-button></div>
+ <div class="center">6ページ目</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>結果 あなたにはボクサーパンツをおすすめします</p>
+ <ons-button id="push-button-g">最初に戻る</ons-button>
+ 
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+ <ons-template id="page7.html">
+ <ons-page id="seven-page">
+ <ons-toolbar>
+ <div class="left"><ons-back-button>質問2</ons-back-button></div>
+ <div class="center">7ページ目</div>
+ </ons-toolbar>
+ 
+ <div class="content" style="text-align: center">
+ <p>結果 あなたにはトランクスをおすすめします</p>
+ <ons-button id="push-button-h">最初に戻る</ons-button>
+ 
+ </div>
+ </ons-page>
+ </ons-template>
+ 
+</body>
+</html>
